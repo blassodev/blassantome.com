@@ -27,8 +27,8 @@ const Contact: FC = () => {
   const sendMail = async () => {
     try {
       const response = await axios.post(
-        //"http://localhost:2233/mail/send",
-        "https://api.blassantome.com/mail/send",
+        "https://api-blassantome.herokuapp.com//mail/send",
+        //"https://api.blassantome.com/mail/send",
         formData
       );
       setLoading(false);
@@ -55,15 +55,9 @@ const Contact: FC = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
   const handleOnClick = () => {
-    const validFormErrors = {
-      name: "",
-      email: "",
-      subject: "",
-      body: "",
-    };
-    if (formErrors === validFormErrors) {
+
       sendMail();
-    }
+    
   };
   const handleBlur = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
