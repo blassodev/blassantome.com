@@ -21,7 +21,11 @@ const GithubRepos: FC = () => {
       try {
         const response = await axios.get(
           //"http://localhost:2233/github/listRepos"
+<<<<<<< HEAD
           "https://api-blassantome.herokuapp.com/github/listRepos"
+=======
+          "https://api.blassantome.me/github/listRepos"
+>>>>>>> 9df39c071755aa3480a3418cfd38b48693d37e47
         );
 
         setLoading(false);

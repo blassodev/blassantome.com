@@ -10,8 +10,8 @@ import axios from "axios";
 const Contact: FC = () => {
   const { setTab } = useTab();
   const [snackOpen, setSnack]= useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  //const [loading, setLoading] = useState(false);
+  //const [error, setError] = useState(false);
   const [formErrors, setFormErrors] = useState({
     name: " ",
     email: " ",
@@ -26,16 +26,24 @@ const Contact: FC = () => {
   });
   const sendMail = async () => {
     try {
+<<<<<<< HEAD
       const response = await axios.post(
         "https://api-blassantome.herokuapp.com//mail/send",
         //"https://api.blassantome.com/mail/send",
+=======
+      //const response =
+          await axios.post(
+        //"http://localhost:2233/mail/send",
+        "https://api.blassantome.com/mail/send",
+>>>>>>> 9df39c071755aa3480a3418cfd38b48693d37e47
         formData
       );
-      setLoading(false);
+
+      //setLoading(false);
       displaySnack();
     } catch (error) {
-      setLoading(false);
-      setError(error.response);
+      //setLoading(false);
+      //setError(error.response);
     }
   };
 
@@ -55,9 +63,21 @@ const Contact: FC = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
   const handleOnClick = () => {
+<<<<<<< HEAD
 
       sendMail();
     
+=======
+    // const validFormErrors = {
+    //   name: "",
+    //   email: "",
+    //   subject: "",
+    //   body: "",
+    // };
+    // if (formErrors === validFormErrors) {
+      sendMail();
+    //}
+>>>>>>> 9df39c071755aa3480a3418cfd38b48693d37e47
   };
   const handleBlur = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -146,7 +166,7 @@ const Contact: FC = () => {
       />
       <SquareRoundedButton onClick={handleOnClick}>Enviar</SquareRoundedButton>
     </SC.InputGroupForm>
-    <SnackBar open={snackOpen} body="Mensaje enviado"></SnackBar>
+    <SnackBar open={snackOpen} body="Mensaje enviado"/>
     </div>
   );
 };
