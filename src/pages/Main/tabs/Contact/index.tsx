@@ -56,21 +56,9 @@ const Contact: FC = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
   const handleOnClick = () => {
-<<<<<<< HEAD
+      sendMail();
+  
 
-      sendMail();
-    
-=======
-    // const validFormErrors = {
-    //   name: "",
-    //   email: "",
-    //   subject: "",
-    //   body: "",
-    // };
-    // if (formErrors === validFormErrors) {
-      sendMail();
-    //}
->>>>>>> 9df39c071755aa3480a3418cfd38b48693d37e47
   };
   const handleBlur = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
