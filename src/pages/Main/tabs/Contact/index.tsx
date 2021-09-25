@@ -26,7 +26,7 @@ const Contact: FC = () => {
   });
   const sendMail = async () => {
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://api-blassantome.herokuapp.com//mail/send",
         //"https://api.blassantome.com/mail/send",
         formData
